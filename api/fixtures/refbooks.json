@@ -1,0 +1,20 @@
+[
+{
+  "model": "refbooks.referencebook",
+  "pk": 1,
+  "fields": {
+    "code": "MS-1",
+    "name": "MS-1 name",
+    "description": "Test desc"
+  }
+},
+{
+  "model": "refbooks.referencebook",
+  "pk": 2,
+  "fields": {
+    "code": "ICD-10",
+    "name": "ICD-10 name",
+    "description": "Test desc"
+  }
+}
+]

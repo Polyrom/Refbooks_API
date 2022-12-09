@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "refbooks"
+version = "0.1.0"
+description = ""
+authors = ["Roman Poliakov <roman61394@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Django = "^4.1.4"
+djangorestframework = "^3.14.0"
+flake8 = "^6.0.0"
+django-environ = "^0.9.0"
+drf-yasg = "^1.21.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

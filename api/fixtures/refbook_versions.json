@@ -1,0 +1,38 @@
+[
+{
+  "model": "refbooks.referencebookversion",
+  "pk": 1,
+  "fields": {
+    "reference_book": 1,
+    "version": "1.0",
+    "start_date": "2022-11-25"
+  }
+},
+{
+  "model": "refbooks.referencebookversion",
+  "pk": 2,
+  "fields": {
+    "reference_book": 1,
+    "version": "1.1",
+    "start_date": "2022-12-05"
+  }
+},
+{
+  "model": "refbooks.referencebookversion",
+  "pk": 3,
+  "fields": {
+    "reference_book": 2,
+    "version": "0.1",
+    "start_date": "2022-12-01"
+  }
+},
+{
+  "model": "refbooks.referencebookversion",
+  "pk": 4,
+  "fields": {
+    "reference_book": 2,
+    "version": "0.2",
+    "start_date": "2022-12-04"
+  }
+}
+]

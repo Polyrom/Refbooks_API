@@ -1,0 +1,74 @@
+[
+{
+  "model": "refbooks.referencebookitem",
+  "pk": 1,
+  "fields": {
+    "reference_book_version": 1,
+    "code": "T-1",
+    "value": "Test disease 1"
+  }
+},
+{
+  "model": "refbooks.referencebookitem",
+  "pk": 2,
+  "fields": {
+    "reference_book_version": 1,
+    "code": "T-2",
+    "value": "Test disease 2"
+  }
+},
+{
+  "model": "refbooks.referencebookitem",
+  "pk": 3,
+  "fields": {
+    "reference_book_version": 2,
+    "code": "T-3",
+    "value": "Test disease 3"
+  }
+},
+{
+  "model": "refbooks.referencebookitem",
+  "pk": 4,
+  "fields": {
+    "reference_book_version": 2,
+    "code": "T-4",
+    "value": "Test disease 4"
+  }
+},
+{
+  "model": "refbooks.referencebookitem",
+  "pk": 5,
+  "fields": {
+    "reference_book_version": 3,
+    "code": "T-5",
+    "value": "Test disease 5"
+  }
+},
+{
+  "model": "refbooks.referencebookitem",
+  "pk": 6,
+  "fields": {
+    "reference_book_version": 3,
+    "code": "T-6",
+    "value": "Test disease 6"
+  }
+},
+{
+  "model": "refbooks.referencebookitem",
+  "pk": 7,
+  "fields": {
+    "reference_book_version": 4,
+    "code": "T-7",
+    "value": "Test disease 7"
+  }
+},
+{
+  "model": "refbooks.referencebookitem",
+  "pk": 8,
+  "fields": {
+    "reference_book_version": 4,
+    "code": "T-8",
+    "value": "Test disease 8"
+  }
+}
+]

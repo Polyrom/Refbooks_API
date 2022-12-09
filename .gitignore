@@ -1,0 +1,9 @@
+.venv/
+.idea/
+dist/
+.DS_Store
+__pycache__
+.pytest_cache
+.env
+**/migrations
+db.sqlite3
