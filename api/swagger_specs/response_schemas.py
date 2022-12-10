@@ -1,10 +1,13 @@
 from drf_yasg import openapi
 
-# Example responses for Swagger UI
+from api.refbooks.serializers import (ReferenceBookSerializer,
+                                      ReferenceBookItemSerializer)
 
+# Example responses for Swagger UI
 list_refbooks = {
     "200": openapi.Response(
         description="Success",
+        schema=ReferenceBookSerializer,
         examples={
             "application/json": {
                 "refbooks": [
@@ -21,12 +24,13 @@ list_refbooks = {
                 ]
             }
         }
-    )
+    ),
 }
 
 list_elements = {
     "200": openapi.Response(
         description="Success",
+        schema=ReferenceBookItemSerializer,
         examples={
             "application/json": {
                 "elements": [
