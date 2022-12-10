@@ -1,3 +1,5 @@
+[![linter](https://github.com/Polyrom/Refbooks_API/actions/workflows/linter.yml/badge.svg)](https://github.com/Polyrom/Refbooks_API/actions/workflows/linter.yml) [![tests](https://github.com/Polyrom/Refbooks_API/actions/workflows/tests.yml/badge.svg)](https://github.com/Polyrom/Refbooks_API/actions/workflows/tests.yml)
+
 ### REST API to handle reference books
 
  **Stack**:
@@ -9,7 +11,7 @@
 ### Installation
 1. Clone the repository
 ```
-git clone https://github.com/Polyrom/refbooks
+git clone https://github.com/Polyrom/Refbooks_API.git
 cd refbooks
 ```
 2. Install dependencies with **Poetry**
