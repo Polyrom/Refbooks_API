@@ -108,3 +108,9 @@ REST_FRAMEWORK = {
 FIXTURE_DIRS = [
     BASE_DIR.joinpath('api', 'fixtures')
 ]
+
+SWAGGER_SETTINGS = {
+    'USE_SESSION_AUTH': False,
+    'DEFAULT_MODEL_RENDERING': 'example',
+    'OPERATIONS_SORTER': 'alpha'
+}

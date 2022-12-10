@@ -1,8 +1,7 @@
 import datetime
 
-from drf_yasg import openapi
 from drf_yasg.utils import swagger_auto_schema
-from rest_framework.generics import ListAPIView
+from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
 from rest_framework.status import HTTP_200_OK
 from rest_framework.views import APIView
@@ -11,17 +10,15 @@ from api.refbooks.models import (ReferenceBook, ReferenceBookItem,
                                  ReferenceBookVersion)
 from api.refbooks.serializers import (ReferenceBookSerializer,
                                       ReferenceBookItemSerializer)
+from api.swagger_specs import parameters, response_schemas
 
 
-class ReferenceBookView(ListAPIView):
-    """ Lists reference books """
+class ReferenceBookView(GenericAPIView):
+    """ Lists reference books by date is specified """
     serializer_class = ReferenceBookSerializer
 
-    date = openapi.Parameter('date', openapi.IN_QUERY,
-                             description='Active refbooks for the date',
-                             type=openapi.FORMAT_DATE)
-
-    @swagger_auto_schema(manual_parameters=[date])
+    @swagger_auto_schema(manual_parameters=[parameters.date],
+                         responses=response_schemas.list_refbooks)
     def get(self, request, *args, **kwargs):
         queryset = self.get_queryset()
         serializer = self.get_serializer(queryset, many=True)
@@ -38,21 +35,12 @@ class ReferenceBookView(ListAPIView):
         return queryset
 
 
-class ReferenceBookItemsView(ListAPIView):
+class ReferenceBookItemsView(GenericAPIView):
     """ Lists reference book elements """
     serializer_class = ReferenceBookItemSerializer
 
-    version = openapi.Parameter('version', openapi.IN_QUERY,
-                                description='Refbook version',
-                                type=openapi.TYPE_STRING)
-
-    @swagger_auto_schema(manual_parameters=[version],
-                         operation_description='Filters reference book '
-                                               'elements by book ID '
-                                               'and version if specified. '
-                                               'If version is not specified, '
-                                               'returns the elements of '
-                                               'the latest version.')
+    @swagger_auto_schema(manual_parameters=[parameters.version],
+                         responses=response_schemas.list_elements)
     def get(self, request, *args, **kwargs):
         queryset = self.get_queryset()
         serializer = self.get_serializer(queryset, many=True)
@@ -81,19 +69,10 @@ class ReferenceBookItemsView(ListAPIView):
 class CheckElementView(APIView):
     """ Validates reference book element presence """
 
-    code = openapi.Parameter('code', openapi.IN_QUERY,
-                             description='Element code',
-                             type=openapi.TYPE_STRING,
-                             required=True)
-    value = openapi.Parameter('value', openapi.IN_QUERY,
-                              description='Element value',
-                              type=openapi.TYPE_STRING,
-                              required=True)
-    version = openapi.Parameter('version', openapi.IN_QUERY,
-                                description='Refbook version',
-                                type=openapi.TYPE_STRING)
-
-    @swagger_auto_schema(manual_parameters=[code, value, version])
+    @swagger_auto_schema(manual_parameters=[parameters.code,
+                                            parameters.value,
+                                            parameters.version],
+                         responses=response_schemas.check_element)
     def get(self, request, **kwargs):
         """
         Checks reference book element existence by code,
