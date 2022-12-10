@@ -6,7 +6,7 @@ authors = ["Roman Poliakov <roman61394@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.8.1"
 Django = "^4.1.4"
 djangorestframework = "^3.14.0"
 flake8 = "^6.0.0"
