@@ -47,10 +47,12 @@ class ReferenceBookItemsView(ListAPIView):
                                 type=openapi.TYPE_STRING)
 
     @swagger_auto_schema(manual_parameters=[version],
-                         operation_description='Filters reference book elements '
-                                               'by book ID and version if specified. '
-                                               'If version is not specified, returns '
-                                               'the elements of the latest version.')
+                         operation_description='Filters reference book '
+                                               'elements by book ID '
+                                               'and version if specified. '
+                                               'If version is not specified, '
+                                               'returns the elements of '
+                                               'the latest version.')
     def get(self, request, *args, **kwargs):
         queryset = self.get_queryset()
         serializer = self.get_serializer(queryset, many=True)

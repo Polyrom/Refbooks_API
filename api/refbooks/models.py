@@ -1,5 +1,4 @@
 from django.db import models
-from drf_yasg import openapi
 
 
 class ReferenceBook(models.Model):
