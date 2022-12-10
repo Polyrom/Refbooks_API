@@ -6,13 +6,13 @@
 + Python 3.10
 + Django 4.1 / DRF 3.14
 + SQLite
-+ Swagger
++ Swagger (drf-yasg 1.21)
 
 ### Installation
 1. Clone the repository
 ```
 git clone https://github.com/Polyrom/Refbooks_API.git
-cd refbooks
+cd Refbooks_API
 ```
 2. Install dependencies with **Poetry**
 
@@ -34,18 +34,16 @@ SECRET_KEY=your Django secret key (may be generated with 'make secretkey' comman
 
 5. Finish installation
 ```
-make makemigrations
 make migrate
 make superuser
 ```
-6. Now can run the app on you localhost
+6. Now can run the app on your localhost
 ```
 make start
 ```
-
+7. You can populate the database through the standard Django admin
+page at `http://<your localhost>/admin/
+`
 ### Usage
 Endpoints with available HTTP methods and parameters can be found
-in Swagger documentation:
-```
-http://<your localhost>/swagger/
-```
+in Swagger documentation at `http://<your localhost>/docs/`
