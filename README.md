@@ -1,4 +1,4 @@
-[![linter](https://github.com/Polyrom/Refbooks_API/actions/workflows/linter.yml/badge.svg)](https://github.com/Polyrom/Refbooks_API/actions/workflows/linter.yml) [![tests](https://github.com/Polyrom/Refbooks_API/actions/workflows/tests.yml/badge.svg)](https://github.com/Polyrom/Refbooks_API/actions/workflows/tests.yml) [![Maintainability](https://api.codeclimate.com/v1/badges/7551ecaf8b206118fb0f/maintainability)](https://codeclimate.com/github/Polyrom/Refbooks_API/maintainability)
+[![linter](https://github.com/Polyrom/Refbooks_API/actions/workflows/linter.yml/badge.svg)](https://github.com/Polyrom/Refbooks_API/actions/workflows/linter.yml) [![tests](https://github.com/Polyrom/Refbooks_API/actions/workflows/tests.yml/badge.svg)](https://github.com/Polyrom/Refbooks_API/actions/workflows/tests.yml) [![Test Coverage](https://api.codeclimate.com/v1/badges/7551ecaf8b206118fb0f/test_coverage)](https://codeclimate.com/github/Polyrom/Refbooks_API/test_coverage) [![Maintainability](https://api.codeclimate.com/v1/badges/7551ecaf8b206118fb0f/maintainability)](https://codeclimate.com/github/Polyrom/Refbooks_API/maintainability)
 
 ### REST API to handle reference books
 

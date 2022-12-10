@@ -11,12 +11,19 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.8
-    - name: Install dependencies
+    - name: install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install poetry
         make install
-    - name: Run tests
+    - name: run tests
       env:
         SECRET_KEY: ${{ secrets.SECRET_KEY }}
       run: make test
+    - name: test & publish code coverage
+      uses: paambaati/codeclimate-action@v2.7.4
+      env:
+        CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+      with:
+        coverageCommand: make test-coverage
+        debug: true
