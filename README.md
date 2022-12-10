@@ -36,7 +36,7 @@ SECRET_KEY=your Django secret key (may be generated with 'make secretkey' comman
 ```
 make makemigrations
 make migrate
-make createsuperuser
+make superuser
 ```
 6. Now can run the app on you localhost
 ```
