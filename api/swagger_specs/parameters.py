@@ -18,6 +18,7 @@ code = openapi.Parameter('code', openapi.IN_QUERY,
                          description='Element code',
                          type=openapi.TYPE_STRING,
                          required=True)
+
 value = openapi.Parameter('value', openapi.IN_QUERY,
                           description='Element value',
                           type=openapi.TYPE_STRING,
