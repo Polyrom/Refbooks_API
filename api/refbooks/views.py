@@ -31,7 +31,7 @@ class ReferenceBookView(GenericAPIView):
         if date is not None:
             queryset = queryset.filter(
                 referencebookversion__start_date__lte=date
-            )
+            ).distinct()
         return queryset
 
 
