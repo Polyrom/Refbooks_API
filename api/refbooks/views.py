@@ -31,7 +31,7 @@ class ReferenceBookView(GenericAPIView):
         if date is not None:
             queryset = queryset.filter(
                 referencebookversion__start_date__lte=date
-            ).distinct()
+            ).order_by('id').distinct()
         return queryset
 
 
@@ -51,15 +51,15 @@ class ReferenceBookItemsView(GenericAPIView):
         Filters reference book elements by book ID and version if specified.
         If version is not specified, returns the elements of the latest version.
         """
-        queryset = ReferenceBookItem.objects.all()
+        refbooks = ReferenceBookItem.objects.all()
         version = self.request.query_params.get('version')
         current_version = ReferenceBookVersion.objects.filter(
             reference_book=self.kwargs['pk'],
             start_date__lte=datetime.date.today()).\
-            order_by('-start_date').first()
+            order_by('-start_date').first().version
         if version is not None:
             current_version = version
-        queryset = queryset.filter(
+        queryset = refbooks.filter(
             reference_book_version__reference_book=self.kwargs['pk'],
             reference_book_version__version=current_version
         )
@@ -89,7 +89,7 @@ class CheckElementView(APIView):
         current_version = ReferenceBookVersion.objects.filter(
             reference_book=kwargs['pk'],
             start_date__lte=datetime.date.today()).\
-            order_by('-start_date').first()
+            order_by('-start_date').first().version
         if version is not None:
             current_version = version
         return Response(refbook_items.filter(

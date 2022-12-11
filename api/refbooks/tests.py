@@ -10,17 +10,17 @@ class ReferenceBookTests(APITestCase):
                 'refbook_items.json']
 
     EXPECTED_ELEMENTS = {
-        'elements': [
-            {
-                'code': 'T-3',
-                'value': 'Test disease 3'
-            },
-            {
-                'code': 'T-4',
-                'value': 'Test disease 4'
-            }
-        ]
-    }
+            'elements': [
+                {
+                    'code': 'T-3',
+                    'value': 'Test disease 3'
+                },
+                {
+                    'code': 'T-4',
+                    'value': 'Test disease 4'
+                }
+            ]
+        }
 
     def test_get_refbooks(self):
         url = reverse('refbooks')
