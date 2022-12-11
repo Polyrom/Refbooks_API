@@ -1,7 +1,7 @@
 from drf_yasg import openapi
 
 from api.refbooks.serializers import (ReferenceBookSerializer,
-                                      ReferenceBookItemSerializer)
+                                      ReferenceBookElementSerializer)
 
 # Example responses for Swagger UI
 list_refbooks = {
@@ -30,7 +30,7 @@ list_refbooks = {
 list_elements = {
     "200": openapi.Response(
         description="Success",
-        schema=ReferenceBookItemSerializer,
+        schema=ReferenceBookElementSerializer,
         examples={
             "application/json": {
                 "elements": [

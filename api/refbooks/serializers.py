@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from api.refbooks.models import (ReferenceBook,
                                  ReferenceBookVersion,
-                                 ReferenceBookItem)
+                                 ReferenceBookElement)
 
 
 class ReferenceBookSerializer(serializers.ModelSerializer):
@@ -18,8 +18,8 @@ class ReferenceBookVersionSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-class ReferenceBookItemSerializer(serializers.ModelSerializer):
+class ReferenceBookElementSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = ReferenceBookItem
+        model = ReferenceBookElement
         fields = ['code', 'value']

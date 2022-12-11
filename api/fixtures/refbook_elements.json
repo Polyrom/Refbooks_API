@@ -1,6 +1,6 @@
 [
 {
-  "model": "refbooks.referencebookitem",
+  "model": "refbooks.referencebookelement",
   "pk": 1,
   "fields": {
     "reference_book_version": 1,
@@ -9,7 +9,7 @@
   }
 },
 {
-  "model": "refbooks.referencebookitem",
+  "model": "refbooks.referencebookelement",
   "pk": 2,
   "fields": {
     "reference_book_version": 1,
@@ -18,7 +18,7 @@
   }
 },
 {
-  "model": "refbooks.referencebookitem",
+  "model": "refbooks.referencebookelement",
   "pk": 3,
   "fields": {
     "reference_book_version": 2,
@@ -27,7 +27,7 @@
   }
 },
 {
-  "model": "refbooks.referencebookitem",
+  "model": "refbooks.referencebookelement",
   "pk": 4,
   "fields": {
     "reference_book_version": 2,
@@ -36,7 +36,7 @@
   }
 },
 {
-  "model": "refbooks.referencebookitem",
+  "model": "refbooks.referencebookelement",
   "pk": 5,
   "fields": {
     "reference_book_version": 3,
@@ -45,7 +45,7 @@
   }
 },
 {
-  "model": "refbooks.referencebookitem",
+  "model": "refbooks.referencebookelement",
   "pk": 6,
   "fields": {
     "reference_book_version": 3,
@@ -54,7 +54,7 @@
   }
 },
 {
-  "model": "refbooks.referencebookitem",
+  "model": "refbooks.referencebookelement",
   "pk": 7,
   "fields": {
     "reference_book_version": 4,
@@ -63,7 +63,7 @@
   }
 },
 {
-  "model": "refbooks.referencebookitem",
+  "model": "refbooks.referencebookelement",
   "pk": 8,
   "fields": {
     "reference_book_version": 4,

@@ -7,7 +7,7 @@ from rest_framework.test import APITestCase
 class ReferenceBookTests(APITestCase):
     fixtures = ['refbooks.json',
                 'refbook_versions.json',
-                'refbook_items.json']
+                'refbook_elements.json']
 
     EXPECTED_ELEMENTS = {
         'elements': [

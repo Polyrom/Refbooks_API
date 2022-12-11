@@ -2,16 +2,16 @@ from django.contrib import admin
 
 from api.refbooks.models import (ReferenceBook,
                                  ReferenceBookVersion,
-                                 ReferenceBookItem)
+                                 ReferenceBookElement)
 
 admin.site.register(ReferenceBook)
-admin.site.register(ReferenceBookItem)
+admin.site.register(ReferenceBookElement)
 
 
 @admin.register(ReferenceBookVersion)
 class ReferenceBookVersionAdmin(admin.ModelAdmin):
 
     class ReferenceBookItemInline(admin.StackedInline):
-        model = ReferenceBookItem
+        model = ReferenceBookElement
 
     inlines = [ReferenceBookItemInline]

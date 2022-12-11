@@ -33,7 +33,7 @@ class ReferenceBookVersion(models.Model):
         return f'{self.reference_book.code} ({self.version})'
 
 
-class ReferenceBookItem(models.Model):
+class ReferenceBookElement(models.Model):
     reference_book_version = models.ForeignKey(ReferenceBookVersion,
                                                on_delete=models.CASCADE)
     code = models.CharField(max_length=100, null=False, blank=False)

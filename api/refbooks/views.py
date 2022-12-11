@@ -6,10 +6,10 @@ from rest_framework.response import Response
 from rest_framework.status import HTTP_200_OK
 from rest_framework.views import APIView
 
-from api.refbooks.models import (ReferenceBook, ReferenceBookItem,
+from api.refbooks.models import (ReferenceBook, ReferenceBookElement,
                                  ReferenceBookVersion)
 from api.refbooks.serializers import (ReferenceBookSerializer,
-                                      ReferenceBookItemSerializer)
+                                      ReferenceBookElementSerializer)
 from api.swagger_specs import parameters, response_schemas
 
 
@@ -37,7 +37,7 @@ class ReferenceBookView(GenericAPIView):
 
 class ReferenceBookItemsView(GenericAPIView):
     """ Lists reference book elements """
-    serializer_class = ReferenceBookItemSerializer
+    serializer_class = ReferenceBookElementSerializer
 
     @swagger_auto_schema(manual_parameters=[parameters.version],
                          responses=response_schemas.list_elements)
@@ -51,7 +51,7 @@ class ReferenceBookItemsView(GenericAPIView):
         Filters reference book elements by book ID and version if specified.
         If version is not specified, returns the elements of the latest version.
         """
-        refbooks = ReferenceBookItem.objects.all()
+        refbooks = ReferenceBookElement.objects.all()
         version = self.request.query_params.get('version')
         current_version = ReferenceBookVersion.objects.filter(
             reference_book=self.kwargs['pk'],
@@ -80,7 +80,7 @@ class CheckElementView(APIView):
         If version is not specified, checks among the elements
         of the latest version.
         """
-        refbook_items = ReferenceBookItem.objects.filter(
+        refbook_items = ReferenceBookElement.objects.filter(
             reference_book_version__reference_book=kwargs['pk']
         ).all()
         code = self.request.query_params.get('code')
