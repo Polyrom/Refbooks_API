@@ -37,8 +37,14 @@ make superuser
 make start
 ```
 6. You can populate the database through the standard Django admin
-page at `http://<your localhost>/admin/
-`
+page at 
+
+```
+http://<your localhost>/admin/
+```
 ### Usage
 Endpoints with available HTTP methods and parameters can be found
-in Swagger documentation at `http://<your localhost>/docs/`
+in Swagger documentation at
+```
+http://<your localhost>/docs/
+```
