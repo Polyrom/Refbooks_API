@@ -19,6 +19,7 @@ cd Refbooks_API
 <br>
 If you don't have Poetry installed, here's the installation guide:
          <a href="https://python-poetry.org/docs/"><strong>Poetry installation</strong></a>
+<br>
 
 1. Install dependencies
 
