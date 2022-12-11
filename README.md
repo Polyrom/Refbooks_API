@@ -22,26 +22,21 @@ cd Refbooks_API
 make install
 ```
 
-3. Create an .env file
+3. Create and populate the .env file
 ```
-touch .env
-```
-4. Populate the .env file with the following values:
-```
-DEBUG=True
-SECRET_KEY=your Django secret key (may be generated with 'make secretkey' command)
+make env
 ```
 
-5. Finish installation
+4. Migrate the DB and create supersuser
 ```
 make migrate
 make superuser
 ```
-6. Now can run the app on your localhost
+5. Now you are ready to run the app on your localhost
 ```
 make start
 ```
-7. You can populate the database through the standard Django admin
+6. You can populate the database through the standard Django admin
 page at `http://<your localhost>/admin/
 `
 ### Usage

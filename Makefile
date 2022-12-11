@@ -30,5 +30,5 @@ test-coverage:
 	poetry run coverage xml
 	poetry run coverage report
 
-secretkey:
-	poetry run python -c 'from django.utils.crypto import get_random_string; print(get_random_string(40))'
+env:
+	python contrib/env_generator.py
