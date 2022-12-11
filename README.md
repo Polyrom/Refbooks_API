@@ -14,29 +14,60 @@
 git clone https://github.com/Polyrom/Refbooks_API.git
 cd Refbooks_API
 ```
-2. Install dependencies with **Poetry**
+<details>
+<summary><strong>Installation guide using Poetry</strong></summary>
+<br>
+If you don't have Poetry installed, here's the installation guide:
+         <a href="https://python-poetry.org/docs/"><strong>Poetry installation</strong></a>
 
-    2.1. If you don't have Poetry installed, here's the installation guide:
-         **[Poetry installation](https://python-poetry.org/docs/)**
+1. Install dependencies
+
 ```
 make install
 ```
-
-3. Create and populate the .env file
+2. Create and populate the .env file
 ```
 make env
 ```
 
-4. Migrate the DB and create supersuser
+3. Migrate the DB and create supersuser
 ```
 make initial-migration
 make superuser
 ```
-5. Now you are ready to run the app on your localhost
+</details>
+<details>
+<summary><strong>Installation guide using standard venv</strong></summary>
+<br>
+1. Create and activate virtual environment
+
 ```
+python3 -m venv venv
+source venv/bin/activate
+```
+2. Install dependencies
+```
+pip install -r requirements.txt
+```
+3. Create and populate the .env file
+```
+python contrib/env_generator.py
+```
+4. Migrate the DB schema and create superuser
+```
+python manage.py migrate --run-syncdb
+python manage.py createsuperuser
+```
+</details>
+
+Now you are ready to run the app on your localhost
+```
+# If you use Poetry
 make start
+# If you use standard venv
+python manage.py runserver
 ```
-6. You can populate the database through the standard Django admin
+You can populate the database through the standard Django admin
 page at 
 
 ```
