@@ -2,14 +2,14 @@
 
 ### REST API to handle reference books
 
- **Stack**:
+ **Stack**
 + Python 3.10
 + Django 4.1 / DRF 3.14
 + SQLite
 + Swagger (drf-yasg 1.21)
 
 ### Installation
-Clone the repository
+**Clone the repository**
 ```
 git clone https://github.com/Polyrom/Refbooks_API.git
 cd Refbooks_API
@@ -39,6 +39,7 @@ make superuser
 <details>
 <summary><strong>Installation guide using standard venv</strong></summary>
 <br>
+
 1. Create and activate virtual environment
 
 ```
@@ -60,15 +61,18 @@ python manage.py createsuperuser
 ```
 </details>
 
-Now you are ready to run the app on your localhost
+**Now you are ready to run the app on your localhost**
+
+To get the server running with Poetry:
 ```
-# If you use Poetry
 make start
-# If you use standard venv
+```
+To get the server running with venv:
+```
 python manage.py runserver
 ```
 You can populate the database through the standard Django admin
-page at 
+page at
 
 ```
 http://<your localhost>/admin/
