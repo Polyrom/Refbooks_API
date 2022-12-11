@@ -31,4 +31,4 @@ test-coverage:
 	poetry run coverage report
 
 env:
-	python contrib/env_generator.py
+	poetry run python contrib/env_generator.py
