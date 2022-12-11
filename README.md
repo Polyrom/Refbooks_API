@@ -29,7 +29,7 @@ make env
 
 4. Migrate the DB and create supersuser
 ```
-make migrate
+make initial-migration
 make superuser
 ```
 5. Now you are ready to run the app on your localhost
