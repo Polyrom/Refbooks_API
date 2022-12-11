@@ -9,7 +9,7 @@
 + Swagger (drf-yasg 1.21)
 
 ### Installation
-1. Clone the repository
+Clone the repository
 ```
 git clone https://github.com/Polyrom/Refbooks_API.git
 cd Refbooks_API
