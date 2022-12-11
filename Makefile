@@ -32,3 +32,6 @@ test-coverage:
 
 env:
 	poetry run python contrib/env_generator.py
+
+initial-migration:
+	poetry run python manage.py migrate --run-syncdb
